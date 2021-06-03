@@ -1,37 +1,94 @@
-## Welcome to GitHub Pages
+## Project 2
 
-You can use the [editor on GitHub](https://github.com/killua-boop/cit281-p2/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+``` markdown
+Goals and Outcomes
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+  - Gain experience using git via your CLI and Visual Studio Code (VSCode) Source Control
+  - Gain experience writing and executing non-web server Node.js JavaScript code
+  - Practice refactoring JavaScript code
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+p2-random.js
 
-### Jekyll Themes
+```rouge
+  `/*
+    CIT 281 Project 2
+    Name: Emily Deng
+*/
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/killua-boop/cit281-p2/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+// will return a single, random, lowercase letter
+function getRandomLetter() {
 
-### Support or Contact
+    const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+    return alphabet[Math.floor(Math.random() * alphabet.length)];
+}
+
+// Returns a random number between min (inclusive) and max (exclusive)
+function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+// will return a random length string between 10 and 20 characters
+function getRandomString(minLength, maxLength) {
+    let length = Math.floor(Math.random() * (maxLength - minLength) + minLength);
+    let string = "";
+    for (let i = 0; i < length; i++) {
+        string += getRandomLetter();
+    }
+    return string;
+}
+
+// return a string in ascending order
+function getSortedString(string) {
+    return string.split("").sort().join("");
+}
+
+console.log(getSortedString(getRandomString(10, 20)));`
+
+```
+
+p2-expressions.js
+
+```rouge
+  `/*
+    CIT 281 Project 2
+    Name: Emily Deng
+*/
+
+// will return a single, random, lowercase letter
+const getRandomLetter = function() {
+
+    const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+
+    return alphabet[Math.floor(Math.random() * alphabet.length)];
+}
+
+// Returns a random number between min (inclusive) and max (exclusive)
+const getRandomInteger = function(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+// will return a random length string between 10 and 20 characters
+const getRandomString = function(minLength, maxLength) {
+    let length = Math.floor(Math.random() * (maxLength - minLength) + minLength);
+    let string = "";
+    for (let i = 0; i < length; i++) {
+        string += getRandomLetter();
+    }
+    return string;
+}
+
+// return a string in ascending order
+const getSortedString = function(string) {
+    return string.split("").sort().join("");
+}
+
+console.log(getSortedString(getRandomString(10, 20)));`
+
+```
+
+<img src="p2-vscode-diff.png![image](https://user-images.githubusercontent.com/84113983/120712980-2de37b00-c476-11eb-98e2-e5cc9667777a.png" width="715" height="665" />
+
+
