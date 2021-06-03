@@ -88,6 +88,7 @@ const getSortedString = function(string) {
 console.log(getSortedString(getRandomString(10, 20)));`
 
 ```
+*Screen capture both sides of the diff split screen*
 
 <img src="https://user-images.githubusercontent.com/84113983/120712980-2de37b00-c476-11eb-98e2-e5cc9667777a.png" width="715" height="665" />
 
